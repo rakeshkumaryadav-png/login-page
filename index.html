@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <form>
+      <input type="text" placeholder="Username" required>
+
+      <input type="password" id="password" placeholder="Password" required>
+
+      <div class="row">
+        <label>
+          <input type="checkbox" onclick="togglePassword()">
+          Show password
+        </label>
+
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="register">
+      Don't have an account?
+      <a href="#">Register</a>
+    </p>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const pass = document.getElementById("password");
+      if (pass.type === "password") {
+        pass.type = "text";
+      } else {
+        pass.type = "password";
+      }
+    }
+  </script>
+
+</body>
+</html>
